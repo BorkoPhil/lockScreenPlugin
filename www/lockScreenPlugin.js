@@ -4,7 +4,7 @@
 
 var lockScreen = {
 	setBackground: function(){
-		window.echo = function(str, callback) {
+		window.echo = function(callback) {
 				cordova.exec(callback, function(err) {
 					callback('Nothing to echo.');
 				}, "lockScreenPlugin", "lockscreen", []);
