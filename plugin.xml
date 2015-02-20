@@ -10,7 +10,7 @@
   <keywords>cordova,lock, screen</keywords>
 
   <js-module src="www/lockScreenPlugin.js" name="lockScreenPlugin">
-    <clobbers target="lockScreenPlugin" />
+    <clobbers target="window.lockScreenPlugin" />
   </js-module>
 
   <!-- android -->
@@ -22,9 +22,9 @@
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
         <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-		<uses-permission android:name="android.permission.WAKE_LOCK" />
-		<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-		<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     </config-file>
 
     <source-file src="src/android/lockScreenPlugin.java" target-dir="src/com/fboris/LockScreen/" />
