@@ -3,7 +3,6 @@
 // MIT Licensed.
 
 var lockScreen = {
-	var str = "borisTest";
 	setBackground: function(){
 		window.echo = function(str, callback) {
 				cordova.exec(callback, function(err) {
