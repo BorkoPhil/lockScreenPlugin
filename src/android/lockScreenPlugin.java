@@ -31,7 +31,7 @@ public class LockScreen extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 		if(action.equals(ACTION)){
-			return "skruju";
+			return true;
 		} else {
 			return false;
 		}
