@@ -3,10 +3,8 @@
 // MIT Licensed.
 
 var lockScreen = {
-	setBackground: function(){
-		cordova.exec(callback, function(err) {
-				callback('Nothing to echo.');
-			}, "lockScreenPlugin", "lockscreen", []);
+	setBackground: function(successcallback, failurecallback){
+		cordova.exec(successcallback, failurecallback, "lockScreenPlugin", "lockscreen", []);
 	}
 }
 
