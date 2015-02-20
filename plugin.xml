@@ -10,7 +10,7 @@
   <keywords>cordova,lock, screen</keywords>
 
   <js-module src="www/lockScreenPlugin.js" name="lockScreenPlugin">
-    <clobbers target="window.lockScreenPlugin" />
+    <clobbers target="lockScreenPlugin" />
   </js-module>
 
   <!-- android -->
