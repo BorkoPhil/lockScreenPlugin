@@ -24,7 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 //import receiver.lockScreenReeiver;
 
-public class LockScreen extends CordovaPlugin {
+public class lockScreenPlugin extends CordovaPlugin {
 	
 	public static final String ACTION = "lockscreen";
 
