@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="com.fboris.LockScreen"
+  version="0.1.0">
+  <name>LockScreen</name>
+  <description>Cordova Lock Screen Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,lock, screen</keywords>
+
+  <js-module src="www/lockScreenPlugin.js" name="lockScreenPlugin">
+    <clobbers target="window.lockScreenPlugin" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="lockScreenPlugin">
+        <param name="android-package" value="com.fboris.LockScreen.lockScreenPlugin"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+		<uses-permission android:name="android.permission.WAKE_LOCK" />
+		<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+		<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    </config-file>
+
+    <source-file src="src/android/lockScreenPlugin.java" target-dir="src/com/fboris/LockScreen/" />
+  </platform>
+</plugin>
